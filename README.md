@@ -1,7 +1,13 @@
 # golang-elasticsearch
 
+## Install and SETUP GO
+Download and configure your workspace with latest version of Go and correct environment path.
+- [Last Version](https://golang.org/dl/)
+- [Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/)
+- [Linux](http://www.tecmint.com/install-go-in-linux/)
+
 ## Install Driver
-Create new dep
+Install dep [klik here](https://golang.github.io/dep/docs/installation.html) and Create new dep
 ```
 dep init 
 ```
@@ -11,6 +17,24 @@ dep ensure -add github.com/gin-gonic/gin
 ```
 ```
 dep ensure -add github.com/olivere/elastic
+```
+
+Import driver
+```
+import (
+	"encoding/json"
+	"fmt"
+	"go-elasticsearch/search-api/config"
+	"go-elasticsearch/search-api/models"
+	"log"
+	"net/http"
+	"strconv"
+	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/olivere/elastic"
+	"github.com/teris-io/shortid"
+)
 ```
 
 ## Connection

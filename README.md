@@ -72,6 +72,7 @@ r := gin.Default()
 		log.Fatal(err)
 	}
 ```
+build rest with method POST and GET, if you run this file it will be run on port 9999 `r.run(:9999)`
 ## Run
 ```
 go run main.go
